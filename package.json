@@ -11,9 +11,11 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/source-strapi": "^0.2.0",
     "bootstrap": "^5.0.2",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "markdown-it": "^12.1.0"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.6.4"
+    
   }
 }
