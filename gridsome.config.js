@@ -5,15 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: '段娇的个人网站',
   plugins: [
-    // {
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     typeName: 'BlogPost',
-    //     path: './content/blog/**/*.md',
-    //   }
-    // },
     {
       use: '@gridsome/source-strapi',
       options: {
@@ -38,11 +31,11 @@ module.exports = {
         component: './src/templates/Post.vue'
       }
     ],
-    StrapiTag: [
-      {
-        path: '/tag/:id',
-        component: './src/templates/Tag.vue'
-      }
-    ]
+    // StrapiTag: [
+    //   {
+    //     path: '/tag/:id',
+    //     component: './src/templates/Tag.vue'
+    //   }
+    // ]
   }
 }

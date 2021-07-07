@@ -9,6 +9,8 @@ import './assets/css/index.css'
 import './assets/css/styles.css'
 
 import DefaultLayout from '~/layouts/Default.vue'
+import ElementUI from 'element-ui'
+import "element-ui/lib/theme-chalk/index.css"
 
 export default function (Vue, { router, head, isClient }) {
   Vue.mixin({
@@ -18,6 +20,7 @@ export default function (Vue, { router, head, isClient }) {
       }
     }
   })
+  Vue.use(ElementUI)
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }
