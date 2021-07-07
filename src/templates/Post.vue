@@ -1,31 +1,18 @@
 <template>
   <Layout>
     <!-- Page Header-->
-    <header class="masthead" 
-    :style="{
-        backgroundImage: `url(${GRIDSOME_API_URL + $page.post.cover.url})`
-    }">
-      <div class="container position-relative px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-md-10 col-lg-8 col-xl-7">
-            <div class="post-heading">
-              <h1>{{$page.post.title}}</h1>
-              <span class="meta">
-                Posted by
-                <a href="#!">Start Bootstrap</a>
-                on {{$page.post.created_at}}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <header class="masthead">
+
     </header>
     <!-- Post Content-->
     <article class="mb-4">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-md-10 col-lg-8 col-xl-7" v-html="mdToHtml($page.post.content)">
-          </div>
+          <h1 style="text-align: center; padding-top: 10px">{{ $page.post.title }}</h1>
+          <div
+            class="col-md-10 col-lg-8 col-xl-7"
+            v-html="mdToHtml($page.post.content)"
+          ></div>
         </div>
       </div>
     </article>
@@ -49,19 +36,19 @@ query($id: ID) {
 }
 </page-query>
 <script>
-import MarkdownIt from 'markdown-it'
+import MarkdownIt from "markdown-it";
 
-const md = new MarkdownIt()
+const md = new MarkdownIt();
 export default {
   name: "post",
   metaInfo: {
     title: "post",
   },
   methods: {
-        mdToHtml (mdContent) {
-            return md.render(mdContent)
-        }
-  }
+    mdToHtml(mdContent) {
+      return md.render(mdContent);
+    },
+  },
 };
 </script>
 
